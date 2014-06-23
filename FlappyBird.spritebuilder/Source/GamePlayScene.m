@@ -9,6 +9,7 @@
     // your code here
     character = (Character*) [CCBReader load:@"Character"]; //loads Character from CCB files
     [physicsNode addChild:character]; //adds character as child of physicsNode, so physics applies to it
+    [self addObstacle];
 }
 
 -(void)update:(CCTime)delta
@@ -20,7 +21,7 @@
 - (void)touchBegan: (UITouch *)touch withEvent:(UIEvent *)event
 {
     //this will get called every time the player touches the screen
-    [character flap]; 
+    [character flap];
 }
 
 @end
