@@ -18,6 +18,9 @@ typedef NS_ENUM(NSInteger, DrawingOrder) {
 @interface GamePlayScene : CCNode <CCPhysicsCollisionDelegate>
 {
     // define variables here;
+    //the two below are class scope
+    Character* character; //stores instance of Flappy Bird
+    CCPhysicsNode* physicsNode; //reference node that simulates physics
 }
 
 -(void) initialize;
